@@ -1,93 +1,71 @@
-# Sui dApp Starter Template
+📦 Sui Logistics (Decentralized Supply Chain)
 
-This dApp was created using `@mysten/create-dapp` that sets up a basic React
-Client dApp using the following tools:
+Sistem pelacakan rantai pasok (supply chain) terdesentralisasi yang transparan, aman, dan futuristik.
 
-- [React](https://react.dev/) as the UI framework
-- [TypeScript](https://www.typescriptlang.org/) for type checking
-- [Vite](https://vitejs.dev/) for build tooling
-- [Radix UI](https://www.radix-ui.com/) for pre-built UI components
-- [ESLint](https://eslint.org/) for linting
-- [`@mysten/dapp-kit`](https://sdk.mystenlabs.com/dapp-kit) for connecting to
-  wallets and loading data
-- [pnpm](https://pnpm.io/) for package management
+Aplikasi ini dibangun di atas blockchain Sui Network untuk menjamin keaslian data produk mulai dari pabrik hingga ke tangan konsumen. Dilengkapi dengan visualisasi 3D interaktif dan pelacakan berbasis QR Code.
 
-For a full guide on how to build this dApp from scratch, visit this
-[guide](http://docs.sui.io/guides/developer/app-examples/e2e-counter#frontend).
+🌐 Live Demo
 
-## Deploying your Move code
+Cobain langsung aplikasinya di sini:
 
-### Install Sui cli
+👉 sui-supply-chain-dapp.vercel.app
 
-Before deploying your move code, ensure that you have installed the Sui CLI. You
-can follow the [Sui installation instruction](https://docs.sui.io/build/install)
-to get everything set up.
+(Pastikan kamu sudah menginstall Sui Wallet (Slush) dan terhubung ke jaringan Testnet)
 
-This template uses `testnet` by default, so we'll need to set up a testnet
-environment in the CLI:
+✨ Fitur Unggulan
 
-```bash
-sui client new-env --alias testnet --rpc https://fullnode.testnet.sui.io:443
-sui client switch --env testnet
-```
+🏭 Factory Minting (Produksi):
+Pabrik dapat mencetak "Digital Twin" dari produk fisik sebagai objek on-chain yang unik.
 
-If you haven't set up an address in the sui client yet, you can use the
-following command to get a new address:
+📦 Real-time Tracking:
+Pantau status dan perpindahan tangan barang secara transparan. Setiap perubahan status tercatat abadi di blockchain (Immutable).
 
-```bash
-sui client new-address secp256k1
-```
+🧊 3D Visualization:
+Menampilkan representasi paket dalam bentuk 3D interaktif (menggunakan React Three Fiber) untuk pengalaman pengguna yang imersif.
 
-This well generate a new address and recover phrase for you. You can mark a
-newly created address as you active address by running the following command
-with your new address:
+📱 QR Code Verification:
+Setiap barang memiliki QR Code unik yang digenerate otomatis berdasarkan ID Blockchain-nya. Scan untuk verifikasi keaslian!
 
-```bash
-sui client switch --address 0xYOUR_ADDRESS...
-```
+🛠️ Teknologi (Tech Stack)
 
-We can ensure we have some Sui in our new wallet by requesting Sui from the
-faucet `https://faucet.sui.io`.
+Blockchain: Sui Network (Testnet)
 
-### Publishing the move package
+Smart Contract: Sui Move Language
 
-The move code for this template is located in the `move` directory. To publish
-it, you can enter the `move` directory, and publish it with the Sui CLI:
+Frontend: React + Vite (TypeScript)
 
-```bash
-cd move
-sui client publish --gas-budget 100000000 counter
-```
+Wallet Integration: @mysten/dapp-kit
 
-In the output there will be an object with a `"packageId"` property. You'll want
-to save that package ID to the `src/constants.ts` file as `PACKAGE_ID`:
+3D Engine: Three.js & React Three Fiber
 
-```ts
-export const TESTNET_COUNTER_PACKAGE_ID = "<YOUR_PACKAGE_ID>";
-```
+Styling: Custom CSS (Glassmorphism & Dark Mode UI)
 
-Now that we have published the move code, and update the package ID, we can
-start the app.
+🚀 Cara Menjalankan di Lokal
 
-## Starting your dApp
+Jika ingin mengutak-atik kodenya di komputer sendiri:
 
-To install dependencies you can run
+Clone Repository
 
-```bash
-pnpm install
-```
+git clone [https://github.com/Ov3rkill15/sui-supply-chain-dapp.git](https://github.com/Ov3rkill15/sui-supply-chain-dapp.git)
+cd sui-supply-chain-dapp
 
-To start your dApp in development mode run
 
-```bash
-pnpm dev
-```
+Install Dependencies
 
-## Building
+cd src # atau folder root project
+npm install
+# Jika error, gunakan: npm install --legacy-peer-deps
 
-To build your app for deployment you can run
 
-```bash
-pnpm build
-```
-# sui-supply-chain-dapp
+Jalankan Frontend
+
+npm run dev
+
+
+Buka http://localhost:5173 di browser.
+
+📜 Lisensi
+
+Project ini dibuat sebagai bagian dari Web3 Bootcamp untuk tujuan pembelajaran (Educational Purpose).
+
+Author: [Alwan Suryadi]
