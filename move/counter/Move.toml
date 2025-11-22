@@ -1,0 +1,12 @@
+[package]
+name = "tracking_app"
+version = "0.0.1"
+edition = "legacy" # Kita pakai Legacy biar anti-crash
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[addresses]
+tracking_app = "0x0" # Alamat untuk Module kita
+std = "0x1"
+sui = "0x2"
