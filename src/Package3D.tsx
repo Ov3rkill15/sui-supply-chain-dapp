@@ -8,7 +8,7 @@ const Box = () => {
   const meshRef = useRef<THREE.Mesh>(null);
 
   // Animasi Putar-Putar Otomatis
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.y += delta * 0.5; // Putar sumbu Y
       meshRef.current.rotation.x += delta * 0.2; // Putar sumbu X pelan
