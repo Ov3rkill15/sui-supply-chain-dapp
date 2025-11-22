@@ -8,7 +8,7 @@ Aplikasi ini dibangun di atas blockchain Sui Network untuk menjamin keaslian dat
 
 Cobain langsung aplikasinya di sini:
 
-👉 [Bisa di klik disini aja](sui-supply-chain-dapp.vercel.app)*
+👉 [Bisa di klik disini aja](https://sui-supply-chain-dapp-j8ul.vercel.app/)*
 
 (Pastikan kamu sudah menginstall Sui Wallet (Slush) dan terhubung ke jaringan Testnet)
 
